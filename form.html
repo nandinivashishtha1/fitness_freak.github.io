@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Form page</title>
+
+    <!-- STYLING OF FORM -->
+    <style>
+        form {
+            width: 600px;
+            text-align: left;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgb(255, 255, 255, 0.7));
+            padding: 40px;
+        }
+
+        #form-heading {
+            text-align: center;
+            font-weight: 2px;
+            margin-bottom: 0px;
+        }
+
+        .feedback {
+            color: red;
+            display: none;
+        }
+
+        input[type=button], input[type=submit], input[type=reset] {
+            background-color: #fca311;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        function validate() {
+            var valid = true;
+
+            hideallerrors();
+
+            if (checkFirstName() == false) {
+                document.getElementById("fb1").style.display = "initial";
+                valid = false;
+            }
+
+            if (checkLastName() == false) {
+                document.getElementById("fb2").style.display = "initial";
+                valid = false;
+            }
+
+            if (checkEmail() == false) {
+                document.getElementById('fb3').style.display = "initial";
+                valid = false;
+            }
+
+            if (checkContactNumber() == false) {
+                document.getElementById("fb4").style.display = "initial";
+                valid = false;
+            }
+
+            if (checkAddress() == false) {
+                document.getElementById('fb5').style.display = "initial";
+                valid = false;
+            }
+
+
+            if (checkFileType() == false) {
+                document.getElementById('fb6').style.display = "initial";
+                valid = false;
+            }
+
+            else {
+                valid = true;
+            }
+            return valid;
+        }
+
+        function hideallerrors() {
+            var allfbs = document.getElementsByClassName("feedback");
+
+            for (var i = 0; i < allfbs.length; i++)
+                allfbs[i].style.display = "none";
+        }
+
+        function checkFirstName() {
+            if (document.stuform.fname.value.length == 0)
+                return false;
+            else
+                return true;
+        }
+
+        function checkLastName() {
+            if (document.stuform.lname.value.length == 0)
+                return false;
+            else
+                return true;
+        }
+
+
+        function checkEmail() {
+            var semail = document.stuform.Email.value;
+            if (!semail.includes('@'))
+                return false;
+
+            if (!(semail.endsWith('.in') || semail.endsWith('.com') || semail.endsWith('.org')))
+                return false;
+
+            return true;
+        }
+
+        function checkContactNumber() {
+            var c_no = document.stuform.Phonenumber.value;
+            if (c_no.length != 10)
+                return false;
+
+            return true;
+        }
+
+        function checkAddress() {
+            if (document.stuform.peraddress.value.length == 0)
+                return false;
+            else
+                return true;
+        }
+
+        function checkFileType() {
+            var sphoto = document.stuform.photo.files;
+            if (sphoto.length == 0)
+                return false;
+
+            if (!(sphoto[0].type == "image/png" || sphoto[0].type == "image/jpg" || sphoto[0].type == "image/jpeg"))
+                return false;
+
+            return true;
+        }
+
+        
+
+        function myFunction(){
+        var name=document.getElementById("name");
+        if(name){
+        alert("Please enter your details");
+        }
+        else{
+        alert("your response has been submitted");
+        }
+        }
+
+    </script>
+
+</head>
+
+<body style="background-image:url('reviewsbg.jpg');background-size:cover;">
+
+    <center>
+        <form action="report.php" method="get" name="stuform" id="myform" onsubmit="return validate(); ">
+            <h2 id="form-heading">Sign Up Now!</h2>
+            <br><br>
+            First Name:
+            <input type="text" name="fname"  id="name" />
+            <span id="fb1" class="feedback">FirstName cannot be blank!!</span>
+            <br><br>
+            Last Name:
+            <input type="text" name="lname" value="" />
+            <span id="fb2" class="feedback">LastName cannot be blank!!</span>
+            <br><br>
+            Gender:
+            <input type="radio" name="gender" value="male" />Male
+            <input type="radio" name="gender" value="female" />Female
+            <input type="radio" name="gender" value="others" />Others
+            <br><br>
+            Email:
+            <input type="email" name="Email">
+            <span id="fb3" class="feedback">Email should be valid!</span>
+            <br><br>
+            Contact Number:
+            <input type="Contact" name="Phonenumber" />
+            <span id="fb4" class="feedback">Contact Number should be of size 10!</span>
+            <br><br>
+            Date:
+            <input type="date" name="date" />
+            <br><br>
+            Permanent Address:
+            <textarea name="peraddress" rows="8" cols="40"></textarea>
+            <span id="fb5" class="feedback">Address block cannot be blank!</span>
+            <br><br>
+            Upload Your Recent Photograph:
+            <input type="file" name="photo" value="" accept="image">
+            <span id="fb6" class="feedback">Photo type must be jpg/jpeg/png.</span>
+            <br><br>
+            <input type="submit" name="submit" value="Submit" onclick="myFunction()" />
+            <input type="reset" name="reset" value="Clear Form" />
+        </form>
+    </center>
+</body>
+
+</html>

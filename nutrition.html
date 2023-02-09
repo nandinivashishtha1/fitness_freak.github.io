@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Fitness Freak</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script type="text/javascript" src=main.js></script>
+    <script src="https://kit.fontawesome.com/53f80c62cb.js" crossorigin="anonymous"></script>
+
+    <script>
+        //JavaScript code for BMI calvulator
+        window.onload = () => {
+            let button = document.querySelector("#btn");
+            button.addEventListener("click", calculateBMI);
+        };
+
+        function calculateBMI() {
+            // Gettinng input from user into height variable.
+            // Input is string so typecasting is neccessary.
+
+            let height = parseInt(document.querySelector("#height").value);
+            // Gettinng input from user into weight variable.
+            // Input is string so typecasting is neccessary.
+
+            let weight = parseInt(document.querySelector("#weight").value);
+
+            let result = document.querySelector("#result");
+            // checking if user providing a proper value or not 
+
+            if (height == " " || isNaN(height))
+            {
+                if (weight == " " || isNaN(weight))
+                result.innerHTML = "Provide valid Height and Weight!";
+                else
+                result.innerHTML = "Provide a valid Height!";
+            }
+            else if (weight == " " || isNaN(weight))
+                result.innerHTML = "Provide a valid Weight!";
+            else {
+                //Fixing upto two decimal places
+                let bmi = (weight / ((height * height) / 10000)).toFixed(2);
+                if (bmi < 18.6)
+                    result.innerHTML = 'Under Weight :' + bmi;
+                else if (bmi >= 18.6 && bmi < 24.9)
+                    result.innerHTML = 'Normal : ' + bmi;
+                else
+                    result.innerHTML = 'Over Weight : ' + bmi;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <nav style="margin-bottom: 40px;">
+        <!-- LOGO -->
+        <img id="logo" src="logo.png">
+
+        <!-- NAVBAR HEADINGS -->
+        <div class="topnav">
+            <a href="home.html" class="link">Home</a>
+            <a href="exercise.html" class="link">Exercise</a>
+            <a href="yoga.html" class="link">Yoga</a>
+            <a href="nutrition.html" class="link">Nutrition</a>
+            <a href="blogs.html" class="link">Blogs</a>
+            <a href="reviews.html" class="link">Reviews</a>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <img class="nutrition-images" id="breakfast" src="f11.jpg">
+    <div class="breakfast">
+        <h1>Eat A Healthy Breakfast</h1>
+        <p id="breakfast">If you exercise in the morning, get up early enough to finish breakfast at least one hour
+            before your workout. Be well-fueled going into a workout. Studies suggest eating or drinking
+            carbohydrates before exercise can improve workout performance and may allow you to work out for a longer
+            duration or higher intensity.
+            <br><br> If you don't eat, you might feel sluggish or lightheaded when you exercise.
+            If you plan to exercise within an hour after breakfast, eat a light breakfast or drink something such as
+            a sports drink. Emphasize carbohydrates for maximum energy.
+            <br>
+            <br>
+            <b>Good breakfast options include:</b>
+        </p>
+        <ul>
+            <li>Whole-grain cereals or bread</li>
+            <li>Low-fat milk</li>
+            <li>Juice</li>
+            <li>A banana</li>
+            <li>Yogurt</li>
+            <li>A pancake</li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <img class="nutrition-images" id="snack" src="f12.jpg">
+    <div class="snack">
+        <h1>Snack Well</h1>
+        <p id="snack">Most people can eat small snacks right before and during exercise. The key is how you feel. Do
+            what works best for you. Snacks eaten soon before exercise probably won't give you added energy if your
+            workout lasts less than 60 minutes, but they may prevent distracting hunger pangs.
+            <br><br> If your workout is longer than 60 minutes, you may benefit by including a carbohydrate-rich
+            food or beverage during the workout.
+            <br><br>
+            <b>Good snack options include:</b>
+        </p>
+        <ul>
+            <li>An energy bar</li>
+            <li>A banana, an apple or other fresh fruit</li>
+            <li>Yogurt</li>
+            <li>A fruit smoothie</li>
+            <li>A whole-grain bagel or crackers</li>
+            <li>A low-fat granola bar</li>
+            <li>A peanut butter sandwich</li>
+            <li>Sports drink or diluted juice</li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <img class="nutrition-images" id="nutrition" src="f13.jpg">
+    <div class="nutrition">
+        <h1>Eat After You Exercise</h1>
+        <p id="nutrition">To help your muscles recover and to replace their glycogen stores, eat a meal that
+            contains both carbohydrates and protein within two hours of your exercise session if possible.
+            <br><br><b>Good post-workout food choices include:</b>
+        </p>
+        <ul>
+            <li>Yogurt and fruit</li>
+            <li>Peanut butter sandwich</li>
+            <li>Low-fat chocolate milk and pretzels</li>
+            <li>Post-workout recovery smoothie</li>
+            <li>Turkey on whole-grain bread with vegetables</li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <img class="nutrition-images" id="drink" src="f14.jpg">
+    <div class="drink">
+        <h1>Drink Up</h1>
+        <p id="drink">Don't forget to drink fluids. You need adequate fluids before, during and after exercise to
+            help prevent dehydration.
+            <br><br>
+            <b>To stay well hydrated for exercise, the American College of Sports Medicine recommends that you:</b>
+        </p>
+        <ul>
+            <li>Drink roughly 2 to 3 cups (473 to 710 milliliters) of water during the two to three hours before
+                your workout.</li>
+            <li>Drink about 1/2 to 1 cup (118 to 237 milliliters) of water every 15 to 20 minutes during your
+                workout. Adjust amounts related to your body size and the weather.</li>
+            <li>Drink roughly 2 to 3 cups (473 to 710 milliliters) of water after your workout for every pound (0.5
+                kilogram) of weight you lose during the workout.</li>
+        </ul>
+        <p>Water is generally the best way to replace lost fluids. But if you're exercising for more than 60
+            minutes, use a sports drink. Sports drinks can help maintain your body's electrolyte balance and give
+            you a bit more energy because they contain carbohydrates.
+        </p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 style="font-size:3em;text-align:center;color:#fca311;"><i>Let Experience Be Your Guide</i></h1>
+    <p
+        style="text-align:center;color:darkcyan;font-size:1.5em;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin:10px">
+        Keep in mind that the length and intensity of your
+        activity will determine how often and what you should eat and drink. For example, you'll need more
+        energy from food to run a marathon than to walk a few miles. And try not to include any new products in
+        your diet before a long-duration sports event. It's best to have previous experience to see how your
+        system handles the food.<br><br>
+        When it comes to eating and exercise, everyone is different. So pay attention to how you feel during
+        your workout and to your overall performance. Let your experience guide you on which pre- and
+        post-exercise eating habits work best for you. Consider keeping a journal to monitor how your body
+        reacts to meals and snacks so that you can adjust your diet for optimal performance.
+    </p>
+    <br>
+    <br>
+    <div class="BMI">
+        <div class="container">
+            <h1 style="color:#fca311;">Calculate Your BMI</h1>
+            <!-- Option for providing height and weight to the user -->
+            <p>The Body Mass Index (BMI) Calculator calculates body mass index from your Weight and Height.</p>
+            <p style="margin-bottom: 0%;">Height (in cm)<input type="text" id="height"
+                    style="width: 200px; height: 20px; margin-left: 20px;"></p>
+            <p style="margin-bottom: 0%;">Weight (in kg) <input type="text" id="weight"
+                    style="width: 200px; height: 20px; margin-left: 20px;"></p>
+            <br><br>
+            <button id="btn">Calculate</button>
+            <div id="result"></div>
+        </div>
+    </div>
+    <br>
+    <br>
+ <!-- FOOTER -->
+ <div class="footer">
+
+    <!-- LOGO IN FOOTER -->
+    <div class="logo-footer">
+      <img id="footer" src="logo.png">
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="footer-content">
+      <h2 style="margin-bottom: 0px;">WORKOUTS</h2>
+      <ul style="padding: 0px;">
+        <li>Workout Videos</li>
+        <li>Custom Workouts</li>
+      </ul>
+    </div>
+
+    <div class="footer-content">
+      <h2 style="margin-bottom: 0px;">PROGRAMS</h2>
+      <ul style="padding: 0px;">
+        <li>Workout programs</li>
+        <li>Meal Plans</li>
+        <li>Routines</li>
+      </ul>
+    </div>
+
+    <div class="footer-content">
+      <h2 style="margin-bottom: 0px;">HEALTHY LIVING</h2>
+      <ul style="padding: 0px;">
+        <li>Fitness</li>
+        <li>Health</li>
+        <li>Nutrition</li>
+        <li>Healthy Recipes</li>
+        <li>Experts</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- COPYRIGHT MSG -->
+  <p id="copyright">Copyright@2021 Fitness Freak. All Rights Reserved.<br>
+    <b>Terms of Use Privacy Policy</b></p>
+  
+  <!-- CONTACT US ICONS -->
+    <div class="footer-icon">
+      <i class="fab fa-twitter fa-3x" style="margin-right: 10px;"></i>
+      <i class="fab fa-facebook-square fa-3x" style="margin-right: 10px;"></i>
+      <i class="fab fa-youtube fa-3x" style="margin-right: 10px;"></i>
+      <i class="fab fa-instagram-square fa-3x" style="margin-right: 10px;"></i>
+    </div>
+</body>
+
+</html>

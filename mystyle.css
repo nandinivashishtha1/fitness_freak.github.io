@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body{
+    background-color: #e5e5e5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  /* NAVIGATION MENU */
+.topnav 
+{
+  text-align:center;
+  padding: 28px;
+  text-decoration: none;
+}
+
+/* NAVIGATION HEADINGS */
+.link
+{
+  color: #000;;
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding:15px;
+  font-size: 22px;
+}
+.link:hover
+{
+    color: #000;
+    opacity: 1.2;
+    border-bottom:3px solid #000;
+    transition: 0.3s;
+}
+
+/* LOGO IN NAVBAR */
+#logo
+{
+    float: left;
+    height: 80px;
+    margin: 10px;
+}
+  
+  /* header  */
+  body {
+    background-image: url("yoga/poster.jpg");
+    background-size: cover;
+    height: 500px;
+    background-repeat: no-repeat;
+  }
+  
+  header h2{
+    color: rgb(66, 151, 185);
+    font-size: 57px;
+    right: 140px;
+    top: 30px;
+    display: inline-block;
+    position: absolute;
+}
+header h3{
+    color: rgb(15, 78, 103);
+    font-size: 31px;
+    right: 140px;
+    top: 110px;
+    display: inline-block;
+    position: absolute;
+}
+header h4{
+    color: rgb(30 87 68);
+    font-size: 18px;
+    right: 140px;
+    background-color: #adad9a;
+    display: inline-block;
+    position: absolute;
+    top: 201px;
+
+}
+
+/* main  */
+.h-primary{
+  font-size: 30px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fca311;
+  padding: 10px;
+  }
+.center{
+  text-align: center;
+ padding: 10px;
+ }
+
+ p{
+  font-size: 20px;
+}
+
+
+/* benefits of yoga */
+#first{
+  background-image: url('yoga/saint-g62ab254d0_1920.jpg');
+  background-size: cover;
+  height: 336px;
+  width: 33%;
+  margin-left: 500px;
+}
+
+ 
+#list1{
+  color: #2a2e31;
+  font-size: 30px;
+  left: 79px;
+  font-style: italic;
+  display: inline-block;
+  position: absolute;
+  padding: 56px 25px;
+
+}
+#list2{
+  color: #2a2e31;
+  font-size: 30px;
+  right: 79px;
+  display: inline-block;
+  position: absolute;
+  padding: 56px 1px;
+  font-style: italic;
+}
+/* courses */
+#services{
+  margin: 20px 80px;
+   display: flex;
+   align-items: center;
+   
+   justify-content: center;
+   flex-wrap: wrap;
+
+ }
+ #services .box{
+   margin: 10px 2px;
+    padding: 19px;
+    transition: all 0.8s ease-in-out;
+
+ }
+ #services .box img{
+  height: 203px;
+  width: 281px;;
+   margin: auto;
+   display: block;
+  
+ }
+ #services .box:hover{
+   transform: scale(1.2);
+  
+ 
+ }
+ #services .box p{
+padding: 2px 5px;
+margin: -20px;
+color: #7f7f73;
+    font-size: 1.0rem;
+ }
+ .htext{
+  font-size: 1.3rem;
+  padding: 0px;
+  margin:5px 46px 18px;
+  color:#000000a8;
+ }
+ 
+ /* article */
+ p#last{
+  background-color: #fca311;
+  padding: 47px 113px;
+  margin: 48px 6px;
+ 
+}
+
+/* footer */
+
+.footer
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #2a2e31;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #e5e5e5;
+}
+
+.footer-content
+{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* logo-footer */
+img#footer
+{
+  height: 200px;
+ }
+ 
+ 
+ p#copyright
+ {
+ text-align:center;
+ color: #2a2e31;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+
+ .footer-icon
+ {
+   display: flex;
+   justify-content: center;
+   margin: 20px;
+   color: #2a2e31;
+ }

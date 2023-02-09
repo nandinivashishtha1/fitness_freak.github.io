@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="reviews.css">
+    <script src="https://kit.fontawesome.com/449a723dc1.js" crossorigin="anonymous"></script>
+    <title>Reviews</title>
+</head>
+
+<body>
+    <nav>
+        <!-- LOGO -->
+        <img id="logo" src="logo.png">
+
+        <!-- NAVBAR HEADINGS -->
+        <div class="topnav">
+            <a href="home.html" class="link">Home</a>
+            <a href="exercise.html" class="link">Exercise</a>
+            <a href="yoga.html" class="link">Yoga</a>
+            <a href="nutrition.html" class="link">Nutrition</a>
+            <a href="blogs.html" class="link">Blogs</a>
+            <a href="reviews.html" class="link">Reviews</a>
+        </div>
+    </nav>
+
+    <!-- MAIN PAGE HEADING -->
+    <h1 class="heading">Here's What Our Users Have To Say...</h1>
+
+    <!-- REVIEWS FLEXBOX -->
+    <div class="reviews">
+
+        <!-- REVIEW-1 -->
+        <div class="review">
+            <div><img src="reviews1.jpg" class="reviewerpic"></div>
+            <div><h2 class="reviewername">Iga Aleksandra</h2></div>
+            <div><p class="reviewquote">"As a beginner, I tried the Yoga workouts available at the Fitness Freak website, and they did wonders for my body and health. Not only did I gain more strength and body shape, Yoga helped me relax and stay calm."</p></div>
+            <div class="ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+        </div>
+
+        <!-- REVIEW-2 -->
+        <div class="review">
+            <div><img src="reviews2.jpg" class="reviewerpic"></div>
+            <div><h2 class="reviewername">Kacper Lipowi</h2></div>
+            <div><p class="reviewquote">"I was very thin and weak, I tired a lot of things earlier to gain weight and be more active in my daily life, but nothing worked out for me. I finally found this amazaing website and tried their diet plans in addition to following the workout videos, I saw a change in myself within weeks... definitely recommned Fitness Freak to everyone out there ;)"</p></div>
+            <div class="ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+        
+
+        <!-- REVIEW-3 -->
+        <div class="review">
+            <div><img src="reviews3.jpg" class="reviewerpic"></div>
+            <div><h2 class="reviewername">Zuza Djonovak</h2></div>
+            <div><p class="reviewquote">"After undergoing a major surgery, I wanted to get back again in my summer body, also healing my wounds at the same time. Fitness Freak was a big big help, their Yoga routines are designed in such a way that they will not just relax you, but they make sure that you don't exhaust yourself. My day now starts with a fine dose of Yoga asanas!"</p></div>
+            <div class="ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+        </div>
+
+    </div>
+    <center>
+      <button class="btn" > Write Your Review</button>
+    </center>
+    
+    
+    <script>
+       let button = document.querySelector('.btn');
+       console.log(button);
+       button.addEventListener('click',showPrompt);
+
+      function showPrompt(){
+        let review =   prompt("Type Your Review Here");
+      console.log(review);
+      if(review)
+      alert("Thank You for Your Response");
+      else
+      alert("No Review Given");
+      }
+    </script>
+
+      <!-- FOOTER -->
+  <div class="footer">
+
+    <!-- LOGO IN FOOTER -->
+    <div class="logo-footer">
+      <img id="footer" src="logo.png">
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="footer-content">
+      <h2 style="margin-bottom: 0px;">WORKOUTS</h2>
+      <ul style="padding: 0px;">
+        <li>Workout Videos</li>
+        <li>Custom Workouts</li>
+      </ul>
+    </div>
+
+    <div class="footer-content">
+      <h2 style="margin-bottom: 0px;">PROGRAMS</h2>
+      <ul style="padding: 0px;">
+        <li>Workout programs</li>
+        <li>Meal Plans</li>
+        <li>Routines</li>
+      </ul>
+    </div>
+
+    <div class="footer-content">
+      <h2 style="margin-bottom: 0px;">HEALTHY LIVING</h2>
+      <ul style="padding: 0px;">
+        <li>Fitness</li>
+        <li>Health</li>
+        <li>Nutrition</li>
+        <li>Healthy Recipes</li>
+        <li>Experts</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- COPYRIGHT MSG -->
+  <p id="copyright">Copyright@2021 Fitness Freak. All Rights Reserved.<br>
+    <b>Terms of Use Privacy Policy</b></p>
+  
+  <!-- CONTACT US ICONS -->
+    <div class="footer-icon">
+      <i class="fab fa-twitter fa-3x" style="margin-right: 10px;"></i>
+      <i class="fab fa-facebook-square fa-3x" style="margin-right: 10px;"></i>
+      <i class="fab fa-youtube fa-3x" style="margin-right: 10px;"></i>
+      <i class="fab fa-instagram-square fa-3x" style="margin-right: 10px;"></i>
+    </div>
+</body>
+
+</html>

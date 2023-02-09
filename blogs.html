@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Blogs</title>
+  <style>
+    body {
+      
+      padding: 0;
+      background: #222224;
+      color: white;
+      color: #C5C5C5;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    /* NAVIGATION MENU */
+.topnav 
+  {
+    text-align:center;
+    padding: 28px;
+    text-decoration: none;
+    margin: 0px;
+  }
+
+  /* NAVIGATION HEADINGS */
+  .link
+  {
+    color:#ffffff;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding:15px;
+    font-size: 22px;
+  }
+  .link:hover
+  {
+      color: #000;
+      opacity: 1.2;
+      border-bottom:3px solid #000;
+      transition: 0.3s;
+  }
+
+  /* LOGO IN NAVBAR */
+  #logo
+  {
+      float: left;
+      height: 80px;
+      margin: 10px;
+  }
+    
+    #blog {
+      margin-left: 10px;
+      font-size: 60px;
+      font-weight: 600;
+      font-style: italic;
+      text-align: left;
+      width: 300px;
+      margin-bottom: 0%;
+    }
+
+    hr {
+      width: 1400px;
+      position: absolute;
+      right: 20px;
+      top: 170px;
+      }
+
+    h2 {
+      font-size: 2em;
+    }
+
+    #image {
+      width: 40%;
+      border: 3px solid black;
+      display: block;
+      margin: auto;
+    }
+
+    p,
+    li {
+      font-size: large;
+    }
+
+    ul {
+      list-style-type: square;
+    }
+
+    li {
+      text-decoration: underline;
+    }
+
+    .quote {
+      text-align: center;
+      font-style: oblique;
+      font-size: x-large;
+
+
+    }
+
+    #more {
+      display: none;
+    }
+
+    #more1 {
+      display: none;
+    }
+
+    #more2 {
+      display: none;
+    }
+
+    /* footer */
+
+  .footer
+  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #2a2e31;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #e5e5e5;
+    text-decoration: none;
+  }
+
+  .footer-content
+  {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    text-decoration: none;
+  }
+
+  /* logo-footer */
+  img#footer
+  {
+    height: 200px;
+   }
+   
+   
+   p#copyright
+   {
+   text-align:center;
+   color: #e5e5e5;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   }
+
+   .footer-icon
+   {
+     display: flex;
+     justify-content: center;
+     margin: 20px;
+     color: #2a2e31;
+   }
+  </style>
+  <!-- JavaScript for read  more -->
+  <script>
+    function myFunction() {
+      var dots = document.getElementById("dots");
+      var moretext = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+
+      if (dots.style.display == "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moretext.style.display = "none";
+      }
+      else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moretext.style.display = "inline";
+      }
+    }
+
+    function myFunction1() {
+      var dots = document.getElementById("dots1");
+      var moretext = document.getElementById("more1");
+      var btnText = document.getElementById("myBtn1");
+
+      if (dots.style.display == "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moretext.style.display = "none";
+      }
+      else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moretext.style.display = "inline";
+      }
+    }
+
+    function myFunction2() {
+      var dots = document.getElementById("dots2");
+      var moretext = document.getElementById("more2");
+      var btnText = document.getElementById("myBtn2");
+
+      if (dots.style.display == "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moretext.style.display = "none";
+      }
+      else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moretext.style.display = "inline";
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+
+  <nav>
+    <!-- LOGO -->
+    <img id="logo" src="logo.png">
+
+    <!-- NAVBAR HEADINGS -->
+    <div class="topnav">
+      <a href="home.html" class="link">Home</a>
+      <a href="exercise.html" class="link">Exercise</a>
+      <a href="yoga.html" class="link">Yoga</a>
+      <a href="nutrition.html" class="link">Nutrition</a>
+      <a href="blogs.html" class="link">Blogs</a>
+      <a href="reviews.html" class="link">Reviews</a>
+    </div>
+  </nav>
+
+  <h1 id="blog"> Blog</h1>
+  <hr>
+
+  <h2>How to make up your mind to exercise? </h2>
+  <img src="blogs/sports-g318e6b000_1920.jpg" id="image" alt="error loading image">
+  <p>
+    It’s time to commit to exercise and there are several guidelines that will help you to slowly get more focused and
+    have better discipline. <br> <br>
+    <span id="dots">...</span><span id="more">
+      1. Timing plays a key role. If you have a work schedule where you start work very early in the morning, then you
+      just may not have the resources to add that into your morning schedule. In that case, don’t worry. Perhaps it’s
+      the other way around where you wind up work very late into the night, but you have a late morning start. <br><br>
+      2. Begin with what is comfortable for you. Don’t allow someone to tell you that what you are doing is not enough.
+      Perhaps you find that your energy crashes with a run and you just want to walk 6,000 steps as a start. Starting
+      slow and building it up without feeling immense pain or fatigue will be a sure way to sustain this. Most often
+      people jump into something strenuous and rigorous because someone else is doing so. Then they feel irritable,
+      tired, and are in pain due to adrenal burnout or post-exercise inflammation that they just quit. <br><br>
+      3. In the beginning, it might be worth building your exercise into something like spending time with your family.
+      This can include playing badminton with your child, going for a walk with your partner, or joining a yoga class
+      with a friend. It is also more sustainable if it is something that you enjoy. <br><br>
+      4. Burst training or HIIT can be very effective workouts in a shorter time. If you have been building up your
+      exercise, and your body is able to recover, start to add a sequence twice a week. There are several curated and
+      guided videos available which you can use within your own home. You may want to add this on your off days when you
+      can relax a little and have a lighter day if you are not yet used to it. <br></span>
+
+  </p>
+  <button onclick="myFunction()" id="myBtn">Read more</button>
+
+  <h2> How to Build Discipline to Exercise</h2>
+  <img src="blogs/man-g84711dfcd_1920.jpg" id="image" alt="error loading image">
+  <p>
+    A common thing that I see with many people who make several changes with their diet but do not improve their health
+    is the lack of adequate exercise.Are you one of those people who manages everything during your day except your
+    exercise? Then this article is just for you!
+  <p class="quote">
+    Whenever you feel like stoping,<br> think again why you started.
+  </p>
+  <span id="dots1">...</span><span id="more1">
+    Exercise can be the difference between you not getting those results for yourself in terms of weight and health, and
+    you feeling fantastic!<br>
+    A lot of people tell me that they don’t need to exercise since they do not have a sedentary lifestyle and that they
+    are on their feet all day. This is just not the same. You could be on your feet all day but having different forms
+    of exercise that include restorative, cardiovascular or aerobic, anaerobic, HIIT, burst training, strength training,
+    stretching, or resistance training have different benefits, just like you eat different foods for different reasons.
+    Being on your feet at work is not exercise, and therefore, the answer lies in you getting disciplined. <br><br>
+    Having a tracker is a simple way to get more disciplined and stay that way. It need not be an expensive investment
+    like an Apple watch. There are several affordable options. It’s amazing how motivated you can be when you just see
+    what you track. <br></span>
+  </p>
+  <button onclick="myFunction1()" id="myBtn1">Read more</button>
+
+
+  <h2>Common Workout Mistakes to Avoid </h2>
+  <img src="blogs/man-g921be3164_1920.jpg" id="image" alt="error loading image">
+  <p>
+    <i> Working out properly is important, otherwise you may not reap any benefits from it or you could even be
+      injured.</i> <br>
+  <h3>Here are few common workout mistakes people make while doing exercises:</h3>
+  <span id="dots2">...</span><br><br>
+  <span id="more2">
+    <ul>
+      <li>Avoiding the pre-workout warm-up</li>
+      <p> No matter how short of a time you have, got continuously incorporate this speedy warm-up in your workout. Make
+        the primary set of each work out a lighter set that’s higher in reps to assist increment blood stream to the
+        zone and hone the movement before going overwhelming. In the event that you basically don’t have a ton of time
+        to induce in your lifting session, abbreviate rest periods and cut out a set of each work out instead of dumping
+        the warm-up.</p>
+      <li>No Strength Training</li>
+      <p>
+        Strength training is not only important for building strong muscles, but also for maintaining muscle tone.
+        Strength training and weightlifting help increase strength and elasticity while building strong connective
+        tissue (think ligaments and tendons). From a biomechanical point of view, weight training helps you carry out
+        your daily activities. Bonus: Endurance training boosts your metabolism and is a great way to get rid of excess
+        body fat.
+      </p>
+      <li>No pre-workout Nutrition</li>
+      <p>Hitting gym without any energy is never a good idea. An apt pre-workout nosh will endow your body with
+        everything you need for better performance. When you work out your body converts glycogen into glucose. This
+        plays a vital part in muscle contraction. By giving your body the correct pre-training sustenance, you’ll
+        diminish muscle glycogen depletion.</p>
+      <li>Lifting too heavy</li>
+      <p>
+        Maintaining correct form and lifting heavy enough weights is a great step along your journey of building some
+        definition in your muscles and feeling much stronger.
+        <br>If you pile the weight on and think you can handle it, but you end up lifting a weight that is way too heavy
+        for you then you’ll probably find that your form is compromised and that could lead to an injury. <br>This is a
+        mistake many beginners make and it’s best to consult with an exercise professional.
+      </p>
+      <li>Improper Form</li>
+      <p>Performing exercises with poor form or incorrect technique is a potential recipe for injury. You should always
+        ensure your form is on-point before attempting to add more weight or progressing to the next stage of an
+        exercise. If you’re struggling to do an exercise using the correct form, it’s a sign you should be lifting
+        lighter weights. It can be difficult to get your form right when you’re in a large class at the gym, or copying
+        what you see on social media.</p>
+      <li>Lifting only light weights</li>
+      <p>
+        When you’re doing strength training you should be pushing yourself. That means you want to add weight every
+        session or every other session. <br>This increase in weight doesn’t need to be a lot. It can even be as little
+        as a kilo each side (or even half a kilo) to the barbell when you’re doing a squat or dead lift, or going up one
+        kilo per dumbbell if you’re using free weights in a shoulder press, for example.
+      </p>
+    </ul>
+  </span>
+  <button onclick="myFunction2()" id="myBtn2">Read more</button>
+  <br><br>
+  <center><b> <i> Overall, as it is worth starting a fitness or workout program, it is equally important to do it right,
+        otherwise you will end up going to a doctor’s. This is the main reason for many people to stop a fitness plan
+        and never look back at it.</b></i></center>
+  </p>
+<!-- FOOTER -->
+<div class="footer">
+
+  <!-- LOGO IN FOOTER -->
+  <div class="logo-footer">
+    <img id="footer" src="logo.png">
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="footer-content">
+    <h2 style="margin-bottom: 0px;">WORKOUTS</h2>
+    <ul style="padding: 0px;">
+      <li>Workout Videos</li>
+      <li>Custom Workouts</li>
+    </ul>
+  </div>
+
+  <div class="footer-content">
+    <h2 style="margin-bottom: 0px;">PROGRAMS</h2>
+    <ul style="padding: 0px;">
+      <li>Workout programs</li>
+      <li>Meal Plans</li>
+      <li>Routines</li>
+    </ul>
+  </div>
+
+  <div class="footer-content">
+    <h2 style="margin-bottom: 0px;">HEALTHY LIVING</h2>
+    <ul style="padding: 0px;">
+      <li>Fitness</li>
+      <li>Health</li>
+      <li>Nutrition</li>
+      <li>Healthy Recipes</li>
+      <li>Experts</li>
+    </ul>
+  </div>
+</div>
+
+<!-- COPYRIGHT MSG -->
+<p id="copyright">Copyright@2021 Fitness Freak. All Rights Reserved.<br>
+  <b>Terms of Use Privacy Policy</b></p>
+
+<!-- CONTACT US ICONS -->
+  <div class="footer-icon">
+    <i class="fab fa-twitter fa-3x" style="margin-right: 10px;"></i>
+    <i class="fab fa-facebook-square fa-3x" style="margin-right: 10px;"></i>
+    <i class="fab fa-youtube fa-3x" style="margin-right: 10px;"></i>
+    <i class="fab fa-instagram-square fa-3x" style="margin-right: 10px;"></i>
+  </div>
+
+
+</body>
+
+</html>

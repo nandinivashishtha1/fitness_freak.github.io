@@ -1,0 +1,178 @@
+/* NAVIGATION MENU */
+.topnav 
+  {
+    text-align:center;
+    padding: 28px;
+    text-decoration: none;
+  }
+
+  /* NAVIGATION HEADINGS */
+  .link
+  {
+    color:#14213d;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding:15px;
+    font-size: 22px;
+  }
+  .link:hover
+  {
+      color: #ffffff;
+      opacity: 1.2;
+      border-bottom:3px solid #ffffff;
+      transition: 0.3s;
+  }
+
+  /* LOGO IN NAVBAR */
+  #logo
+  {
+      float: left;
+      height: 80px;
+      margin: 10px;
+  }
+
+  body
+  {
+    background-image:url('reviews.jpg');
+    background-position: top center; 
+    background-repeat: no-repeat; 
+    background-size: 1600px; 
+    position: static; 
+    background-color: #e5e5e5;
+    margin: 0px;
+  }
+
+/* Here's what our users have to say */
+.heading
+{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #fff;
+  margin-left: 30px;
+  margin-top: 30px;
+  font-size: 250%;
+  font-weight: 500;
+}
+
+/* REVIEWS FLEX CONTAINER */
+.reviews
+{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* INDIVIDUAL REVIEWS CONTAINERS */
+.review
+{
+  width: 500px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgb(255, 255, 255, 0.9));
+  border-radius: 20px;
+  box-shadow: #2a2e31;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow:  0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+
+/* PHOTO OF THE REVIEWER */
+.reviewerpic
+{
+  margin-top: 20px;
+  width: 100px;
+  border-radius: 50px;
+  float: center;
+  justify-self: center;
+  filter: drop-shadow(1px 1px 5px #000);
+}
+
+/* NAME OF THE REVIEWER */
+.reviewername
+{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 100;
+}
+
+/* MAIN REVIEW */
+.reviewquote
+{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 0%;
+}
+
+/* STAR RATINGS */
+.ratings
+{
+  display: flex;
+  color:#fca311;
+  padding: 20px;
+}
+
+/* WRITE YOUR REVIEW BUTTON */
+.btn{
+  width: 250px;
+  height: 60px;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  margin-top: 70px;
+  cursor:pointer;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 50px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  opacity: 0.8;
+  transition: 0.3s;
+  margin-bottom: 40px;
+  background-color:#fca311;
+}
+
+/* footer */
+
+.footer
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #2a2e31;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #e5e5e5;
+  margin-top: 100px;
+}
+
+.footer-content
+{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* logo-footer */
+img#footer
+{
+  height: 200px;
+ }
+ 
+ 
+ p#copyright
+ {
+ text-align:center;
+ color: #2a2e31;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+
+ .footer-icon
+ {
+   display: flex;
+   justify-content: center;
+   margin: 20px;
+   color: #2a2e31;
+ }
+
+ 
+
+
